@@ -1,0 +1,80 @@
+/* Reset styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: rgba(255, 255, 255, 0.5) url('./images/360_F_589704609_b84XoVDaeopctL2Iz0lG4IQT86Dzm7xz.jpg') no-repeat center/cover;
+    color: #333;
+}
+
+/* Header styles */
+header {
+    background-color: #ff6347;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Navigation styles */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffd700; /* Gold color on hover */
+}
+
+/* Section styles */
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Menu item styles */
+.menu-item {
+    border: 1px solid #ddd;
+    margin: 20px;
+    padding: 10px;
+    background-color: white;
+    display: inline-block;
+    width: 200px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: transform 0.3s;
+}
+
+.menu-item img {
+    width: 100%;
+    border-radius: 8px 8px 0 0; /* Rounded top corners */
+}
+
+.menu-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: relative; /* For better layout */
+    bottom: 0;
+    width: 100%;
+}

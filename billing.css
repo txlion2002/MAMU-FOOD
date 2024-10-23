@@ -1,0 +1,106 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background: rgba(255, 255, 255, 0.5) url('./images/2b8d3481fd0855dfb0608f3198fd8adc.jpg') no-repeat center/cover;
+    padding: 20px;
+    margin: 0;
+}
+
+/* Remove underline from anchor tags */
+a {
+    text-decoration: none; /* Remove underline */
+    color: inherit;       /* Inherit color from parent */
+}
+
+/* Container for the billing section */
+.billing-container {
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    padding: 20px;
+    border-radius: 12px;
+    width: 90%; /* Responsive width */
+    max-width: 400px; /* Maximum width for larger screens */
+    margin: 0 auto;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.2),
+                -8px -8px 15px rgba(255, 255, 255, 0.7);
+    transition: box-shadow 0.3s ease;
+}
+
+/* Hover effect for the billing container */
+.billing-container:hover {
+    box-shadow: 12px 12px 20px rgba(0, 0, 0, 0.25),
+                -12px -12px 20px rgba(255, 255, 255, 0.9);
+}
+
+/* Styling for headings */
+h1, h2, h3 {
+    text-align: center;
+    color: #333;
+}
+
+/* Billing details section */
+#billing-details {
+    margin-bottom: 20px;
+}
+
+/* Label styling */
+label {
+    display: block;
+    margin-top: 10px;
+    color: #555;
+}
+
+/* Input styling */
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+    box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.1),
+                inset -4px -4px 8px rgba(255, 255, 255, 0.7);
+}
+
+/* Focus state for input fields */
+input[type="text"]:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2),
+                -4px -4px 8px rgba(255, 255, 255, 0.8);
+}
+
+/* Hover effect for buttons */
+button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+/* Additional message for coupon feedback */
+#coupon-message {
+    text-align: center;
+    color: red; /* Red for error messages */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .billing-container {
+        width: 95%; /* Make the container wider on smaller screens */
+    }
+    
+    h1, h2, h3 {
+        font-size: 1.5em; /* Adjust font size for smaller screens */
+    }
+}

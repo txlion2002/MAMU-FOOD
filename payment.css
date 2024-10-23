@@ -1,0 +1,113 @@
+/* Base styles for the payment container */
+body {
+    font-family: Arial, sans-serif;
+    background: rgba(255, 255, 255, 0.5) url('./images/pexels-janetrangdoan-1092730.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.payment-container {
+    max-width: 600px; /* Limit the width of the payment container */
+    margin: 20px auto; /* Center the container on the page */
+    padding: 20px; /* Add padding inside the container */
+    border: 1px solid #dee2e6; /* Light border around the container */
+    border-radius: 8px; /* Rounded corners for the container */
+    background-color: #ffffff; /* White background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+/* Remove underline from anchor tags */
+a {
+    text-decoration: none; /* Remove underline */
+    color: inherit;       /* Inherit color from parent */
+}
+
+/* Basic styles for the ads section */
+.ads-section {
+    background-color: #f8f9fa; /* Light gray background */
+    border: 1px solid #dee2e6; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px; /* Spacing inside the box */
+    margin-bottom: 20px; /* Space below the ads section */
+}
+
+.ads-section h3 {
+    margin: 0 0 10px; /* Margin for the header */
+    color: #007bff; /* Blue color for the header */
+}
+
+.ads-section p {
+    margin: 5px 0; /* Space between paragraphs */
+    color: #343a40; /* Dark gray color for text */
+}
+
+.ads-section .offer {
+    font-weight: bold; /* Bold text for offers */
+    color: #dc3545; /* Red color for emphasis */
+}
+
+/* Styles for order summary */
+#order-summary {
+    margin-bottom: 20px; /* Space below the order summary */
+}
+
+/* Styles for payment form */
+form {
+    margin-top: 20px; /* Space above the form */
+}
+
+/* Styles for payment method labels */
+label {
+    display: block; /* Display labels as block elements */
+    margin: 10px 0; /* Space above and below labels */
+}
+
+/* Button styles */
+button {
+    background-color: #007bff; /* Blue background color for buttons */
+    color: white; /* White text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 15px; /* Padding inside the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+    width: 100%; /* Full width on small screens */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    /* For tablets and small laptops */
+    .payment-container {
+        padding: 15px; /* Reduced padding */
+    }
+
+    button {
+        font-size: 14px; /* Smaller font size for buttons */
+    }
+
+    .ads-section h3 {
+        font-size: 18px; /* Adjust header size */
+    }
+}
+
+@media (max-width: 576px) {
+    /* For mobile devices */
+    .payment-container {
+        padding: 10px; /* Further reduced padding */
+    }
+
+    button {
+        font-size: 14px; /* Consistent button size */
+    }
+
+    .ads-section h3 {
+        font-size: 16px; /* Smaller header size */
+    }
+
+    .ads-section p {
+        font-size: 14px; /* Adjust paragraph size */
+    }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu with Search and Items</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+     
+    <!-- Search Bar -->
+    <div class="logo" ><a href="index.html">Mamu Food</a></div>
+
+    <div class="search-container">
+        <input type="text" id="search-bar" placeholder="Search..." class="search-bar">
+        <button type="button" class="search-btn" onclick="showMenu()">Search</button>
+    </div>
+
+    <!-- Menu Items (Initially Hidden) -->
+    <div class="menu" id="menu-list" style="display: none;">
+        <div class="menu-item">
+            <img src="./images/panner.jpg" alt="Item 1">
+            <div class="item-info">
+                <h3>Hotel Name: Ashok Hotel, Delhi</h3>
+                <h3>panner</h3>
+                <p>$10.99</p>
+                <button class="buy-btn" onclick="buyItem('Item 1', 10.99, 'The Spice House')">Buy</button>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="./images/panner birayani.jpg" alt="Item 2">
+            <div class="item-info">
+                <h3>Hotel Name: Grand Hyatt Goa</h3>
+                <h3>panner birayani</h3>
+                <p>$12.99</p>
+                <button class="buy-btn" onclick="buyItem('Item 2', 12.99, 'The Spice House')">Buy</button>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="./images/panner fry biryani.jpg" alt="Item 3">
+            <div class="item-info">
+                <h3>Hotel Name: Taj Mahal Palace and Tower, Mumbai</h3>
+                <h3>panner fry biryani</h3>
+                <p>$15.99</p>
+                <button class="buy-btn" onclick="buyItem('Item 3', 15.99, 'The Spice House')">Buy</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

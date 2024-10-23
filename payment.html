@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Options</title>
+    <link rel="stylesheet" href="payment.css">
+    <style>
+        /* Basic styles for the ads section */
+        .ads-section {
+            background-color: #f8f9fa; /* Light gray background */
+            border: 1px solid #dee2e6; /* Light border */
+            border-radius: 8px; /* Rounded corners */
+            padding: 15px; /* Spacing inside the box */
+            margin-bottom: 20px; /* Space below the ads section */
+        }
+        .ads-section h3 {
+            margin: 0 0 10px; /* Margin for the header */
+            color: #007bff; /* Blue color for the header */
+        }
+        .ads-section p {
+            margin: 5px 0; /* Space between paragraphs */
+            color: #343a40; /* Dark gray color for text */
+        }
+        .ads-section .offer {
+            font-weight: bold; /* Bold text for offers */
+            color: #dc3545; /* Red color for emphasis */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="payment-container">
+        <h1 style="color: orange; " > <a href="index.html ">Mamu Food</a></h1>
+        <h2>Payment Information</h2>
+
+        <!-- Advertisement Section -->
+        <div class="ads-section">
+            <h3>Special Offers Just for You!</h3>
+            <p class="offer">🌟 Get 20% off your next purchase with code <strong>DISCOUNT20</strong>!</p>
+            <p>🚚 Enjoy free shipping on orders over $50!</p>
+            <p>🎉 Buy one, get one 50% off on select items!</p>
+            <p>🛒 Check out our new arrivals and get exclusive discounts!</p>
+            <p>💳 Sign up for our newsletter and receive a 10% off coupon!</p>
+        </div>
+
+        <div id="order-summary"></div> <!-- Item and Price Details -->
+
+        <!-- Payment Options -->
+        <h3>Select Payment Method</h3>
+        <form id="payment-form">
+            <label>
+                <input type="radio" name="payment-method" value="Cash on Delivery" required> Cash on Delivery
+            </label><br>
+            <label>
+                <input type="radio" name="payment-method" value="Phone Pay" required> Phone Pay
+            </label><br>
+            <label>
+                <input type="radio" name="payment-method" value="Google Pay" required> Google Pay
+            </label><br>
+            <label>
+                <input type="radio" name="payment-method" value="Debit Card" required> Debit Card
+            </label><br>
+            <label>
+                <input type="radio" name="payment-method" value="Credit Card" required> Credit Card
+            </label><br><br>
+
+            <button id="confirm-payment-btn">Confirm Payment</button>
+        </form>
+    </div>
+
+    
+    <script>
+    // Retrieve item name, price, and address from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const itemName = urlParams.get('item');
+    const itemPrice = urlParams.get('price');
+    const name = urlParams.get('name');
+    const address = urlParams.get('address');
+    const city = urlParams.get('city');
+    const postal = urlParams.get('postal');
+    const country = urlParams.get('country');
+
+    // Display the order summary on the payment page
+    document.getElementById('order-summary').innerHTML = `
+        <p><strong>Item:</strong> ${itemName}</p>
+        <p><strong>Total Price:</strong> $${itemPrice}</p>
+        <h4>Shipping Address:</h4>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Address:</strong> ${address}</p>
+        <p><strong>City:</strong> ${city}</p>
+        <p><strong>Postal Code:</strong> ${postal}</p>
+        <p><strong>Country:</strong> ${country}</p>
+    `;
+
+    document.getElementById('confirm-payment-btn').addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent form submission for demo
+
+        const paymentMethod = document.querySelector('input[name="payment-method"]:checked').value;
+
+        // Confirm the payment method and show a success message
+        if (paymentMethod) {
+            // Store the payment information in local storage
+            localStorage.setItem('itemName', itemName);
+            localStorage.setItem('itemPrice', itemPrice);
+            localStorage.setItem('name', name);
+            localStorage.setItem('address', address);
+            localStorage.setItem('city', city);
+            localStorage.setItem('postal', postal);
+            localStorage.setItem('country', country);
+            localStorage.setItem('paymentMethod', paymentMethod);
+
+            alert(`Order placed successfully using ${paymentMethod}!`);
+            window.location.href = "confirmation.html"; // Redirect to confirmation page after success
+        }
+    });
+</script>
+
+
+</body>
+</html>

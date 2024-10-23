@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+    <link rel="stylesheet" href="order.css">
+</head>
+<body>
+
+    <div class="confirmation-container">
+        <h1><a href="index.html">Mamu Food</a></h1>
+        <h2>Order Confirmation</h2>
+        <div id="order-summary"></div> <!-- Order summary will be displayed here -->
+        <button onclick="goBack()">Go Back to Payment</button>
+    </div>
+
+    <script>
+        // Retrieve order information from local storage
+        const itemName = localStorage.getItem('itemName');
+        const itemPrice = localStorage.getItem('itemPrice');
+        const name = localStorage.getItem('name');
+        const address = localStorage.getItem('address');
+        const city = localStorage.getItem('city');
+        const postal = localStorage.getItem('postal');
+        const country = localStorage.getItem('country');
+        const paymentMethod = localStorage.getItem('paymentMethod');
+
+        // Display the order summary on the confirmation page
+        document.getElementById('order-summary').innerHTML = `
+            <p><strong>Item:</strong> ${itemName}</p>
+            <p><strong>Total Price:</strong> $${itemPrice}</p>
+            <h4>Shipping Address:</h4>
+            <p><strong>Name:</strong> ${name}</p>
+            <p><strong>Address:</strong> ${address}</p>
+            <p><strong>City:</strong> ${city}</p>
+            <p><strong>Postal Code:</strong> ${postal}</p>
+            <p><strong>Country:</strong> ${country}</p>
+            <p><strong>Payment Method:</strong> ${paymentMethod}</p>
+        `;
+
+        function goBack() {
+            window.location.href = "payment.html"; // Redirect back to the payment page
+        }
+    </script>
+
+</body>
+</html>

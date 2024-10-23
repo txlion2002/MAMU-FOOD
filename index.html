@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Mamu Food</title>
+</head>
+<body>
+    <header>
+        <h1>Mamu Food</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2 style="color: white;">Welcome to Mamu Food!</h2>
+        <p style="color: white;" >Your favorite place for delicious food.</p>
+    </section>
+
+    <section id="menu">
+        <h2>Our Menu</h2>
+        <div class="menu-item">
+            <img src="./images/egg gravy.jpg" alt="Dish 1">
+            <h4>Hotel Name: ITC Hotels</h4> <!-- Added hotel name -->
+            <h3>egg gravy</h3>
+            <p>Delicious description of Dish 1.</p>
+            <button onclick="order('Dish 1', 12.99)">Order Now</button>
+        </div>
+        
+        <div class="menu-item">
+            <img src="./images/Chicken-Curry-Thumbnail.jpg" alt="Dish 2">
+            <h4>Hotel Name: Taj Group of Hotels</h4> <!-- Added hotel name -->
+            <h3>Chicken-Curry-Thumbnail</h3>
+            <p>Delicious description of Dish 2.</p>
+            <button onclick="order('Dish 2', 15.49)">Order Now</button>
+        </div>
+        
+        <div class="menu-item">
+            <img src="./images/chicken fry.jpg" alt="Dish 3">
+            <h4>Hotel Name: kfc hyderabad</h4> <!-- Added hotel name -->
+            <h3>chicken fry</h3>
+            <p>Delicious description of Dish 3.</p>
+            <button onclick="order('Dish 3', 9.99)">Order Now</button>
+        </div>
+        
+    </section>
+
+    <section id="about">
+        <h2 >About Us</h2>
+        <p style="color: white;" >Mamu Food is dedicated to serving the best dishes made with love and fresh ingredients. Join us for a culinary experience!</p>
+    </section>
+
+    <footer id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: info@mamufood.com</p>
+        <p>Phone: (123) 456-7890</p>
+        <p>Address: 123 Foodie St, Flavor Town</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
